@@ -4,9 +4,12 @@
   "description": "A boilerplate for building a new Node.js module",
   "main": "index.js",
   "scripts": {
-    "build": "babel --presets es2015,stage-0 -d dist/ src/",
-    "test": "ava",
-    "debug": "babel --presets es2015,stage-0 -d dist/ src/ && node --inspect-brk ./dist/index.js"
+    "postinstall": "./scripts/postinstall.sh",
+    "debug": "./scripts/debug.sh",
+    "build": "./scripts/build.sh",
+    "test": "./scripts/test.sh",
+    "start": "./scripts/start.sh",
+    "stop": "./scripts/stop.sh"
   },
   "repository": {
     "type": "git",
@@ -33,16 +36,25 @@
     "babel-register": "^6.26.0",
     "debug": "^3.0.1",
     "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-concat-css": "^2.3.0",
     "gulp-jshint": "^2.0.4",
+    "gulp-less": "^3.3.2",
+    "gulp-livereload": "^3.8.1",
     "gulp-load-plugins": "^1.5.0",
+    "gulp-open": "^2.0.0",
+    "gulp-sass": "^3.1.0",
     "gulp-sourcemaps": "^2.6.1",
+    "gulp-watch": "^4.3.11",
     "nyc": "^11.2.1",
     "require-dir": "^0.3.2",
-    "sinon": "^3.2.1"
+    "run-sequence": "^2.1.0",
+    "sinon": "^3.2.1",
+    "tap-nyan": "^1.1.0"
   },
   "ava": {
     "files": [
-      "dist/*.spec.js",
+      "dist/*.spec.js"
     ],
     "tap": true,
     "babel": "inherit",
