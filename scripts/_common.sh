@@ -13,7 +13,7 @@ debug() {
 }
 
 test() {
-  if ! ava ; then
+  if ! nyc --reporter=lcov --reporter=text-lcov ava --watch --verbose ; then
     echo 'Error: Unable to start test runner...'
   fi
 }
