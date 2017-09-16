@@ -8,6 +8,7 @@
     "debug": "./scripts/debug.sh",
     "build": "./scripts/build.sh",
     "test": "./scripts/test.sh",
+    "text:coverage": "nyc report",
     "start": "./scripts/start.sh",
     "stop": "./scripts/stop.sh"
   },
