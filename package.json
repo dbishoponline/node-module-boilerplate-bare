@@ -1,8 +1,8 @@
 {
-  "name": "node-module-boilerplate",
+  "name": "node-module-boilerplate-bare",
   "version": "1.0.0",
-  "description": "A boilerplate for building a new Node.js module",
-  "main": "index.js",
+  "description": "A barebones boilerplate for building a new Node.js module",
+  "main": "dist/index.js",
   "scripts": {
     "postinstall": "./scripts/postinstall.sh",
     "debug": "./scripts/debug.sh",
@@ -14,18 +14,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/dbishoponline/node-module-boilerplate.git"
+    "url": "https://github.com/dbishoponline/node-module-boilerplate-bare.git"
   },
   "author": "Dylan Bishop",
   "license": "ISC",
   "dependencies": {
     "babel-polyfill": "^6.26.0",
-    "babel-runtime": "^6.26.0",
-    "bluebird": "^3.5.0",
-    "crocks": "^0.7.1",
-    "fs": "0.0.1-security",
-    "ramda": "^0.24.1",
-    "ramda-fantasy": "^0.8.0"
+    "babel-runtime": "^6.26.0"
   },
   "devDependencies": {
     "ava": "^0.22.0",
@@ -36,26 +31,13 @@
     "babel-preset-stage-0": "^6.24.1",
     "babel-register": "^6.26.0",
     "debug": "^3.0.1",
-    "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^4.0.0",
-    "gulp-concat-css": "^2.3.0",
-    "gulp-jshint": "^2.0.4",
-    "gulp-less": "^3.3.2",
-    "gulp-livereload": "^3.8.1",
-    "gulp-load-plugins": "^1.5.0",
-    "gulp-open": "^2.0.0",
-    "gulp-sass": "^3.1.0",
-    "gulp-sourcemaps": "^2.6.1",
-    "gulp-watch": "^4.3.11",
     "nyc": "^11.2.1",
-    "require-dir": "^0.3.2",
-    "run-sequence": "^2.1.0",
     "sinon": "^3.2.1",
     "tap-nyan": "^1.1.0"
   },
   "ava": {
     "files": [
-      "dist/*.spec.js"
+      "src/**/*.spec.js"
     ],
     "tap": true,
     "babel": "inherit",
